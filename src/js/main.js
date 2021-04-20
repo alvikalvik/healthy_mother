@@ -1,5 +1,7 @@
 // import modules
+
 import runMenu from './menu';
+import runHeroSlider from './heroslider';
 
 
 // run modules
@@ -7,4 +9,5 @@ import runMenu from './menu';
 window.addEventListener('DOMContentLoaded', () => {
     // console.log('DOM fully loaded and parsed');
     runMenu();
+    runHeroSlider();
 });

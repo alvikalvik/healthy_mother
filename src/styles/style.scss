@@ -4,6 +4,8 @@
 
 @import "../../node_modules/bootstrap/scss/bootstrap-grid";
 
+@import "../../node_modules/tiny-slider/dist/tiny-slider";
+
 @import "mixins/media";
 
 @import "mixins/mixins";
@@ -19,6 +21,12 @@
 @import "common/menu";
 
 @import "common/hamburger";
+
+@import "common/btn";
+
+@import "common/title";
+
+@import "common/hero";
 
 @import "common/footer";
 
