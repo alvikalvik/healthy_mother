@@ -7,7 +7,79 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    Один два три
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <a href="#" class="header__logo-link">Здоровая мама</a>
+                <button type="button" class="hamburger">
+                    <span class="hamburger__span"></span>
+                </button>
+                <nav class="header__nav">
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">
+                                Важность правильного питания
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">
+                                Почему мы?
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">
+                                Где заказать?
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="menu__close">&times;</button>
+                </nav>
+            </div>            
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <div class="hero__wrapper">
+                <h1 class="hero__header">Доставка здорового питания для мам</h1>
+                <div class="hero__text">Правильный и вкусный рацион для Вас и вашего ребенка</div>
+                <button class="btn">Оформить заказ</button>
+            </div>            
+        </div>
+        <div class="hero__slides">
+            <div class="hero__slide">
+                <h3 class="hero__slide-header">Для беременных</h3>               
+                
+                <picture class="hero__slide-pic">
+                    <source srcset="img/hero/pregnant-mobile.png 1x, img/hero/pregnant-mobile@2x.png 1.5x" media="(max-width: 576px) ">  
+                    <source srcset="img/hero/pregnant-tablet.png 1x, img/hero/pregnant-tablet@2x.png 1.5x" media="(max-width: 992px) "> 
+                    <source srcset="img/hero/pregnant.png 1x, img/hero/pregnant@2x.png 1.5x" media="(min-width: 992px) ">                 
+                    <img src="img/hero/pregnant@2x.png" alt="Для беременных" class="hero__slide-img">
+                 </picture>
+            </div>
+            <div class="hero__slide">
+                <h3 class="hero__slide-header">Для кормящих</h3>               
+                
+                <picture class="hero__slide-pic">
+                    <source srcset="img/hero/feeding-mobile.png 1x, img/hero/feeding-mobile@2x.png 1.5x" media="(max-width: 576px) ">  
+                    <source srcset="img/hero/feeding-tablet.png 1x, img/hero/feeding-tablet@2x.png 1.5x" media="(max-width: 992px) "> 
+                    <source srcset="img/hero/feeding.png 1x, img/hero/feeding@2x.png 1.5x" media="(min-width: 992px) ">                 
+                    <img src="img/hero/feeding@2x.png" alt="Для кормящих" class="hero__slide-img">
+                 </picture>
+            </div>
+            <div class="hero__slide">
+                <h3 class="hero__slide-header">Безопасные лакомства</h3>               
+                
+                <picture class="hero__slide-pic">
+                    <source srcset="img/hero/healthy-mobile.png 1x, img/hero/healthy-mobile@2x.png 1.5x" media="(max-width: 576px) ">  
+                    <source srcset="img/hero/healthy-tablet.png 1x, img/hero/healthy-tablet@2x.png 1.5x" media="(max-width: 992px) "> 
+                    <source srcset="img/hero/healthy.png 1x, img/hero/healthy@2x.png 1.5x" media="(min-width: 992px) ">                 
+                    <img src="img/hero/healthy@2x.png" alt="Безопасные лакомства" class="hero__slide-img">
+                 </picture>
+            </div>
+            <button class="hero__slides-next"></button>
+            <button class="hero__slides-prev"></button>
+        </div>
+    </section>
     
 
     <script src="js/main.min.js"></script>    

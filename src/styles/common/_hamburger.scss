@@ -1,0 +1,42 @@
+.hamburger {
+    display: none;
+    @include media-mobile {
+        position: absolute;
+        top: 0;
+        right: 4px;
+        display: block;  
+        width: 58px;
+        height: 48px;              
+        border: none;
+        background-color: transparent;
+
+        span, span::before, span::after {
+            position: absolute;
+            left: 50%;
+            display: block;
+            width: 38px;
+            height: 6px;
+            background-color: #27AE60;
+            border-radius: 3px;
+        }
+
+        span {  
+            top: 50%;            
+            transform: translate(-50%, -50%);
+             
+            &::before, &::after {
+                content: ''; 
+                transform: translateX(-50%);                
+            } 
+            &::before {
+                top: 10px;
+            }  
+            &::after {
+                bottom: 10px;
+            }        
+        }
+        &--hidden {
+            display: none;
+        }
+    } 
+}
