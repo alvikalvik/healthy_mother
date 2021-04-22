@@ -1,27 +1,56 @@
 import { tns } from '../../node_modules/tiny-slider/src/tiny-slider';
 
 export default function runHeroSlider() {
-    const slider = document.querySelector('.hero__slides');
-    const slides = slider.querySelectorAll('.hero__slide');
-    const triggers = slider.querySelectorAll('.hero__slide-header');
+    const mediaQuery = window.matchMedia('(max-width: 576px)');
+    let isTnsRunned = false;
+    let tinySlider;
 
-    triggers.forEach((trigger) => {
-        trigger.addEventListener('click', (evt) => {
-            evt.preventDefault();
+    function runDesktopSlider() {
+        const slider = document.querySelector('.hero__slides');
+        const slides = slider.querySelectorAll('.hero__slide');
+        const triggers = slider.querySelectorAll('.hero__slide-header');
 
-            slides.forEach((slide) => {
-                slide.classList.remove('hero__slide--active');
+        triggers.forEach((trigger) => {
+            trigger.addEventListener('click', (evt) => {
+                evt.preventDefault();
+
+                slides.forEach((slide) => {
+                    slide.classList.remove('hero__slide--active');
+                });
+
+                trigger.closest('.hero__slide').classList.add('hero__slide--active');
             });
-
-            trigger.closest('.hero__slide').classList.add('hero__slide--active');
         });
-    });
+    }
 
-    // let heroslider =
-    tns({
-        container: '.my-slider',
-        items: 1,
-        slideBy: 'page',
-        autoplay: false
+    function runMobileSlider() {
+        tinySlider = tns({
+            container: '.hero__slides',
+            items: 1,
+            slideBy: 'page',
+            autoplay: false,
+            controlsText: ['', ''],
+            nav: false
+        });
+        isTnsRunned = true;
+    }
+
+    if (mediaQuery.matches) {
+        runMobileSlider();
+    } else {
+        runDesktopSlider();
+    }
+
+    mediaQuery.addEventListener('change', (evt) => {
+        if (evt.matches) {
+            if (!isTnsRunned) {
+                runMobileSlider();
+            }
+        } else {
+            if (isTnsRunned) {
+                tinySlider.destroy();
+                runDesktopSlider();
+            }
+        }
     });
 }
