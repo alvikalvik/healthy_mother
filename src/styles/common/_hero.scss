@@ -1,11 +1,13 @@
 .hero {    
-    padding-top: 50px;
-    padding-bottom: 400px;
+    padding-top: 50px;    
     width: 100%;
     height: auto;
     overflow-x: hidden;
-    @include media-mobile {
-        padding-bottom: 100px;
+    @include media-tablet {
+        min-height: 1166px;
+    }
+    @include media-mobile {        
+        min-height: unset;
     }
 }
 

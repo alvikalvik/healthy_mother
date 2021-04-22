@@ -1,0 +1,202 @@
+.right-food {    
+    position: relative;    
+    width: 100%;           
+    min-height: 378px;     
+    background-color: $main-color;       
+
+    .container {
+        position: relative;
+    }
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;        
+        width: 672px;
+        height: 100%;
+        background-image: url('../img/right-food/right-food-bg.png');
+        mix-blend-mode: multiply;        
+        background-color: transparent;           
+        background-repeat: repeat-y;
+        background-size: 672px 378px;
+        @media screen and (min-resolution: 1.5dppx) {
+            background-image: url('../img/right-food/right-food-bg@2x.png');
+        }
+    }
+
+    @include media-tablet {
+        padding-top: 50px;        
+        &::before {
+            display: none;            
+        }
+    }    
+}
+
+.right-food__wrapper {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    column-gap: 30px;
+    justify-content: start;
+    align-items: start;
+    overflow: visible;
+    @include media-tablet {
+        display: block;
+    } 
+}
+
+.right-food__content-wrapper {
+    order: 2;
+}
+
+.right-food__title {
+    margin-top: 65px;
+    font-size: 37px;    
+    @include media-tablet {
+        margin: 0 auto;
+        font-size: 41px;
+        width: 500px;
+        text-align: center;
+    } 
+    @include media-tablet {
+        width: 100%;
+        max-width: 300px;
+        font-size: 22px;
+        line-height: 26px;
+    } 
+}
+
+.right-food__list {
+    @include reset-list;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: repeat(2, 1fr);   
+    justify-content: space-between;
+    row-gap: 10px;
+    margin: 50px 0 40px 0;    
+    @include media-tablet {
+        display: block;
+        margin: 40px auto;        
+        width: 380px;  
+        max-width: 95%; 
+        margin: 30px 0 20px 0;     
+    }     
+}
+
+.right-food__item {
+    position: relative;
+    padding-left: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;    
+    color: #FFFFFF;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 25px;
+        height: 18px;
+        background-color: transparent;
+        background-image: url('../img/right-food/item-icon2.svg'), url('../img/right-food/item-icon.svg');
+        background-repeat: no-repeat;
+        background-position: center center;        
+    }
+
+    @include media-tablet {
+        margin-top: 16px;        
+    }
+}
+
+.right-food__img-wrapper {
+    position: relative;
+    order: 1;
+    height: 338px;
+    width: 360px;
+    overflow: visible;
+    @include media-tablet {
+        width: 100%;
+        height: 500px;        
+    }
+    @include media-mobile {
+        width: 100%;
+        height: 310px;        
+    }
+}
+
+.right-food__img {
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(calc(-50% - 70px));
+    width: 626px;
+    height: 582px; 
+    max-width: unset;
+    @include media-tablet {
+        position: static;
+        margin: 0 auto;        
+        transform: unset;
+        width: auto;
+        height: 500px;         
+    }
+    @include media-mobile {        
+        height: 310px;        
+    }
+}
+
+.right-food__specialist-wrapper {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translate(calc(-50% - 70px), 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 347px;
+    height: 72px;
+    background: #FFFFFF;
+    box-shadow: 0px 21px 133px rgba(17, 95, 0, 0.21);
+    border-radius: 65px;
+    @include media-tablet {
+        bottom: 0px;
+        transform: translate(-50%, 50%);      
+    }
+    @include media-mobile {        
+        width: 268px;
+        height: 71px;        
+    }
+}
+
+.right-food__specialist-info {
+    width: 337px;
+    height: 62px;
+    border: 1px dashed $main-color;
+    box-shadow: 0px 21px 133px rgba(17, 95, 0, 0.21);
+    border-radius: 65px;
+    text-align: center;
+    @include media-mobile {        
+        width: 262px;
+        height: 63px;        
+    }
+}
+
+.right-food__specialist-name {
+    margin-top: 9px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;  
+    @include media-mobile {        
+        font-size: 14px;
+        line-height: 20px;        
+    }  
+}
+
+.right-food__specialist-profession {
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #6C997F;
+}
