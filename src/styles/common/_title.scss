@@ -5,6 +5,10 @@
     font-size: 41px;
     line-height: 48px;
     color: #27AE60;
+    @include media-mobile {
+        font-size: 22px;
+        line-height: 26px;
+    }
 }
 
 .title--white {    

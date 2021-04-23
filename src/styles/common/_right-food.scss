@@ -2,7 +2,9 @@
     position: relative;    
     width: 100%;           
     min-height: 378px;     
-    background-color: $main-color;       
+    background-color: $main-color;
+    overflow-x: unset;       
+    // overflow: hidden;
 
     .container {
         position: relative;
@@ -58,7 +60,7 @@
         width: 500px;
         text-align: center;
     } 
-    @include media-tablet {
+    @include media-mobile {
         width: 100%;
         max-width: 300px;
         font-size: 22px;
