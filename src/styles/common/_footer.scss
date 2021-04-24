@@ -1,1 +1,117 @@
-//footer here
+.footer {
+    padding: 40px 0 60px 0;
+    background-color: $main-color;
+    @include media-mobile {
+        padding: 30px 0 40px 0;
+    }
+}
+
+.footer__logo-link {
+    display: block;
+    padding: 10px;
+    margin: 0 250px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.6s;
+    &:hover {
+        color: #000000;
+        text-decoration: none;
+    }
+    &:active {
+        color: $main-color;
+        text-decoration: none;
+    }
+
+    @include media-custom(1200px) {
+        margin: 0 100px;        
+    }
+    @include media-mobile {
+        margin: 0;
+    }
+}
+
+.footer__nav {
+    margin: 20px 250px 0 250px;
+    @include media-custom(1200px) {
+        margin: 20px 100px 0 100px;       
+    }
+    @include media-mobile {
+        margin: 10px 0 0 0;
+    }
+}
+
+.footer__menu {
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    @include media-mobile {
+        display: block;
+    }
+}
+
+.footer__menu__item:not(:last-child) {
+    margin-right: 90px;
+    @include media-custom(1200px) {
+        margin-right: 60px;      
+    }
+    @include media-tablet {
+        margin-right: 20px;
+    }
+    @include media-mobile {
+        margin-right: 0;
+    }
+}
+
+.footer__menu__link {
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+    &:hover, &:active {
+        color: #000000;
+        text-decoration: none;
+    }
+}
+
+.footer__links-list {
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+    @include media-mobile {
+        display: block;
+    }
+}
+
+.footer__link-list-item:not(:last-child) {
+    margin-right: 18px;
+    @include media-tablet {
+        margin-right: 5px;
+    }
+    @include media-mobile {
+        margin-right: 0;
+    }
+}
+
+.footer__link {
+    display: block;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    text-decoration: none;
+    opacity: 0.6;
+    &:hover, &:active {
+        color: #000000;
+        text-decoration: none;
+    }
+}
