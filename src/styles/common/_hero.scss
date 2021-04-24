@@ -15,12 +15,12 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    min-height: 737px;
+    min-height: 767px;
     @include media-tablet {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        text-align: center;        
+        text-align: center;                
     }
 }
 
