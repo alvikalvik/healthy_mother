@@ -3,6 +3,7 @@
 import runMenu from './menu';
 import runHeroSlider from './heroslider';
 import runRequiredFoodSlider from './required-food-slider';
+import runUpElement from './up-element';
 
 
 // run modules
@@ -12,4 +13,5 @@ window.addEventListener('DOMContentLoaded', () => {
     runMenu();
     runHeroSlider();
     runRequiredFoodSlider();
+    runUpElement();
 });
