@@ -8,14 +8,24 @@
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     width: 100%;
-    font-family: Lato, Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Lato, Verdana, Geneva, Tahoma, sans-serif;    
 }
 
 img {
     max-width: 100%;
+}
+
+#before-right-food {
+    position: relative;
+    top: -170px;
+    visibility: hidden;
+    @include media-tablet {
+        position: static;
+    }
 }
